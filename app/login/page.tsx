@@ -32,10 +32,14 @@ const Register = () => {
     } else {
       alert(data.message || "Login failed");
     }
-  } catch (err: any) {
-    console.error(err.message);
-    alert("Something went wrong");
+  } catch (err: unknown) {
+  if (err instanceof Error) {
+    console.error(err.message); // ✅ safe
+  } else {
+    console.error(err);         // যদি Error না হয়
   }
+  alert("Something went wrong");
+}
 };
   return (
     <section className="bg-blue-400 m-0 flex flex-col justify-center pt-4">
