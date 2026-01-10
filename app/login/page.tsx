@@ -55,10 +55,10 @@ const Register = () => {
           <h2 className="text-2xl text-blue-400 font-bold text-center">লগইন করুন</h2>
         </div>
           <div className="flex flex-col items-start relative">
-            <label className="text-lg mb-1">Phone</label> 
+            <label className="text-lg mb-1">ফোন নম্বর</label> 
             <input 
             type="number"
-            placeholder="Enter your number:"
+            placeholder="আপনার ফোন নম্বর লিখুন:"
             className="border-[2px] border-gray-300 py-1 pr-4 pl-10 text-lg rounded-md outline-blue-500"
             value={userNumber ?? ""}
             onChange={(e)=> setNumber(Number(e.target.value))}
@@ -69,10 +69,10 @@ const Register = () => {
           </div>
           
           <div className="flex flex-col items-start relative">
-            <label className="text-lg mb-1">Password</label> 
+            <label className="text-lg mb-1">পাসওয়ার্ড</label> 
             <input 
             type="text"
-            placeholder="Enter your Password:"
+            placeholder="আপনার পাসওয়ার্ড লিখুন:"
             className="border-[2px] border-gray-300 py-1 pr-4 pl-10 text-lg rounded-md outline-blue-500"
             value = {password}
             onChange={(e)=> setPassword(e.target.value)}
